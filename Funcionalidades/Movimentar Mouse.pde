@@ -7,11 +7,11 @@ void setup(){
 }
 
 void draw(){
+background(0);
   ellipse(x,y,50,50);
 }
 
 void mouseDragged(){
-  fill(random(255),random(255),random(255));
   x = mouseX;
   y = mouseY;
 }
