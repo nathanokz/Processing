@@ -5,11 +5,6 @@ void setup(){
 }
 
 void draw(){
-  //background(255);
-  //fill(0);
-  //text("mouseX: " + mouseX, 10, 20);
-  //text("mouseY: " + mouseY, 10, 40);
-  
   fill(255,0,0);
   rect(50,250,100,100);
   fill(0,255,0);
