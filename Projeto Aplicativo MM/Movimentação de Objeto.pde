@@ -3,7 +3,7 @@ boolean arrastando = false;
 float x, y;
 
 void setup() {
-  size(1360, 768);
+  size(1366, 768);
   x = width / 2;
   y = height / 2;
 }
