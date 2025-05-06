@@ -1,5 +1,3 @@
-boolean arrastando = false;
-
 float x, y;
 
 void setup() {
@@ -14,17 +12,7 @@ void draw() {
   fill(#FF0009);
 }
 
-void mousePressed() {
-  if (dist(mouseX, mouseY, x, y) < 25) 
-    arrastando = true;
-}
-
-void mouseReleased() {
-  arrastando = true;
-}
-
 void mouseDragged() {
-  if (arrastando);
   x = mouseX;
   y = mouseY; 
 }
