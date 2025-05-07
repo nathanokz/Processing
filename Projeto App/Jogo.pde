@@ -11,18 +11,19 @@ void setup(){
   x=width/2;
   y=height/2;
   textSize(16);
+  lixeira.resize(250,250);
+  correto.resize(250,250);
 }
 
 void draw(){
-  background(0);
+  background(255);
   image(papel,x,y);
-  tint(0,128);
   image(lixeira,683,600);
-  fill(255);
+  fill(0);
   text("MouseX :" + mouseX,10,20);
   text("MouseY :"+ mouseY,10,40);
   if(mostrarCorreto){
-  image(correto,650,300);
+  image(correto,683,600);
   }
 }
 
@@ -34,7 +35,7 @@ void mouseReleased(){
   if((mouseX>585) && (mouseX<780) && (mouseY>470) && (mouseY<700)){
   image(papel,1500,1500);
   movendoPapel = false;
-  image(correto,650,300);
+  image(correto,683,600);
   mostrarCorreto = true;
   }
 }
