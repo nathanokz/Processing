@@ -33,7 +33,6 @@ void mousePressed(){
 }
 void mouseReleased(){
   if((mouseX>585) && (mouseX<780) && (mouseY>470) && (mouseY<700)){
-  image(papel,1500,1500);
   movendoPapel = false;
   image(correto,683,600);
   mostrarCorreto = true;
