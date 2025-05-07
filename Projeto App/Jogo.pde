@@ -2,6 +2,7 @@ PImage papel, lixeira, correto;
 boolean movendoPapel = false;
 boolean mostrarCorreto = false;
 float x, y;
+
 void setup(){
   size(1366,768);
   papel=loadImage("papel.png");
@@ -31,6 +32,7 @@ void mousePressed(){
   if((mouseX>585) && (mouseY<750) && (mouseY>300) && (mouseY<430))
   movendoPapel = true;
 }
+
 void mouseReleased(){
   if((mouseX>585) && (mouseX<780) && (mouseY>470) && (mouseY<700)){
   movendoPapel = false;
