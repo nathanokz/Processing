@@ -62,7 +62,6 @@ void draw() {
     noStroke();
     fill(#6ca663);
     rect(125, 115, 245, 40, 30);
-    image(casa, 30, 115);
     image(casa2, 30, 115);
     fill(255);
     text("Menu Principal", 55, 125);
