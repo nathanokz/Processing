@@ -71,7 +71,7 @@ void draw() {
     noStroke();
     fill(#6ca663);
     rect(125, 155, 245, 40, 30);
-    image(play, 30, 155);
+    image(play2, 30, 155);
     fill(255);
     text("Vídeos", 55, 165);
   }
@@ -80,7 +80,7 @@ void draw() {
     noStroke();
     fill(#6ca663);
     rect(125, 195, 245, 40, 30);
-    image(livro, 30, 195);
+    image(livro2, 30, 195);
     fill(255);
     text("Livros", 55, 205);
   }
@@ -88,7 +88,7 @@ void draw() {
     noStroke();
     fill(#6ca663);
     rect(125, 235, 245, 40, 30);
-    image(gibi, 30, 235);
+    image(gibi2, 30, 235);
     fill(255);
     text("Histórias", 55, 245);
   }
@@ -96,7 +96,7 @@ void draw() {
     noStroke();
     fill(#6ca663);
     rect(125, 275, 245, 40, 30);
-    image(jogo, 30, 275);
+    image(jogo2, 30, 275);
     fill(255);
     text("Jogos", 55, 285);
   }
