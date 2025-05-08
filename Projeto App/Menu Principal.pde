@@ -1,4 +1,4 @@
-PImage casa, casa2, play, play2, livro, livro2, gibi, gibi2, jogo, jogo2, pesquisa, pesquisa2;
+PImage casa, casa2, play, play2, livro, livro2, gibi, gibi2, jogo, jogo2, pesquisa;
 boolean corVerdeMenu = false;
 boolean corVerdeVideos = false;
 boolean corVerdeLivros = false;
@@ -20,7 +20,6 @@ void setup() {
   jogo = loadImage("jogo.png");
   jogo2 = loadImage("jogo2.png");
   pesquisa = loadImage("pesquisa.png");
-  pesquisa2 = loadImage("pesquisa2.png");
   casa.resize(50, 50);
   play.resize(28, 28);
   livro.resize(40, 40);
