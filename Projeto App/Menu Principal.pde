@@ -27,6 +27,8 @@ void draw() {
   textSize(40);
   text("EXÍMIO", 50, 60);
   text("EXÍMIO", 48, 60);
+  text("EXÍMIO", 49, 60);
+  text("EXÍMIO", 47, 60);
   image(casa, 30, 100);
   fill(#747474);
   textSize(26);
@@ -114,4 +116,3 @@ void mousePressed() {
    }
 
 }
-
