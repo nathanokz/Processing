@@ -1,0 +1,160 @@
+PImage papel, lixeirapapel, correto, lixeiraplastico, garrafa, correto2, lixeiramarrom, maca, correto3, lixeiraamarela, ferro, correto4, quadro;
+boolean movendoPapel = false;
+boolean movendoGarrafa = false;
+boolean movendoMaca = false;
+boolean movendoFerro = false;
+boolean mostrarCorreto = false;
+boolean mostrarCorreto2 = false;
+boolean mostrarCorreto3 = false;
+boolean mostrarCorreto4 = false;
+float papelX, papelY;
+float garrafaX, garrafaY;
+float macaX, macaY;
+float ferroX, ferroY;
+
+void setup() {
+  size(1366, 768);
+  
+  quadro = loadImage("quadro.png");
+  quadro.resize(width, height);
+  
+  papelX = 865;
+  papelY = 130;
+  
+  garrafaX = 1215;
+  garrafaY = 130;
+  
+  macaX = 165;
+  macaY = 130;
+  
+  ferroX = 515;
+  ferroY = 130;
+  
+  imageMode(CENTER);
+  papel = loadImage("papel.png");
+  papel.resize(120, 120);
+  lixeirapapel = loadImage("lixeirapapel.png");
+  lixeirapapel.resize(350, 350);
+  correto = loadImage("correto.png");
+  correto.resize(200, 200);
+  correto2 = loadImage("correto2.png");
+  correto2.resize(200,200);
+  correto3 = loadImage("correto3.png");
+  correto3.resize(200, 200);
+  correto4 = loadImage("correto4.png");
+  correto4.resize(200, 200);
+  lixeiraplastico = loadImage("lixeiraplastico.png");
+  lixeiraplastico.resize(350, 350);
+  garrafa = loadImage("garrafa.png");
+  garrafa.resize(140,140);
+  maca = loadImage("maca.png");
+  maca.resize(140, 140);
+  lixeiramarrom = loadImage("lixeiramarrom.png");
+  lixeiramarrom.resize(350, 350);
+  ferro = loadImage("ferro.png");
+  ferro.resize(140, 140);
+  lixeiraamarela = loadImage("lixeiraamarela.png");
+  lixeiraamarela.resize(350,350);
+  
+} 
+
+  
+void draw() {
+  
+  background(quadro);
+  
+  image(papel, papelX, papelY);
+  image(garrafa, garrafaX, garrafaY);
+  image(maca, macaX, macaY);
+  image(ferro, ferroX, ferroY);
+  image(lixeirapapel, 165, 650); 
+  image(lixeiraplastico, 515, 650);
+  image(lixeiramarrom, 865 , 650);
+  image(lixeiraamarela, 1215, 650);
+  
+  
+  if (mostrarCorreto) {
+    image(correto, 200, 675);
+  }
+  
+  if (mostrarCorreto2) {
+    image(correto2, 550, 675);
+  }
+  
+  if (mostrarCorreto3) {
+    image(correto3, 900 ,675);
+  }
+  
+  if (mostrarCorreto4) {
+    image(correto4, 1250, 675);
+  }
+  println("mouseX = " + mouseX);
+  println("mouseY = " + mouseY);
+}
+
+void mousePressed() {
+   if (mouseX > papelX - papel.width / 2 && mouseX < papelX + papel.width / 2 &&
+   mouseY > papelY - papel.height / 2 && mouseY < papelY + papel.height / 2) {
+     movendoPapel = true;
+     }
+   if (mouseX > garrafaX - garrafa.width / 2 && mouseX < garrafaX + garrafa.width / 2 &&
+   mouseY > garrafaY - garrafa.height / 2 && mouseY < garrafaY + garrafa.height / 2) {
+     movendoGarrafa = true;
+     }
+   if (mouseX > macaX - maca.width / 2 && mouseX < macaX + maca.width/2 &&
+   mouseY > macaY - maca.height / 2 && mouseY < macaY + maca.height / 2) {
+     movendoMaca = true;
+     }
+   if (mouseX > ferroX - ferro.width / 2 && mouseX < ferroX + ferro.width / 2 &&
+   mouseY > ferroY - ferro.height / 2 && mouseY < ferroY + ferro.height / 2) {
+     movendoFerro = true;
+   }
+     
+}
+  
+void mouseReleased() {
+  movendoPapel = false;
+  movendoGarrafa = false;
+  movendoMaca = false;
+  movendoFerro = false;
+  if ((mouseX > 80 ) && (mouseX < 320) && (mouseY > 495 ) && (mouseY < 768)) {
+    mostrarCorreto = true;
+  }
+  if ((mouseX > 430) && (mouseX < 665) && (mouseY > 495) && (mouseY < 768)) {
+    mostrarCorreto2 = true;
+  }
+  if ((mouseX > 780) && (mouseX < 1020) && (mouseY > 495) && (mouseY < 768)) {
+    mostrarCorreto3 = true;
+  }
+  if ((mouseX > 1130) && (mouseX < 1375) && (mouseY > 495) && (mouseY < 768)) {
+    mostrarCorreto4 = true;
+  }
+}
+
+void mouseDragged() {
+  if (movendoPapel) {
+    papelX = mouseX;
+    papelY = mouseY;
+  }
+  
+  if (movendoGarrafa) {
+    garrafaX = mouseX;
+    garrafaY = mouseY;
+  }
+  
+  if (movendoMaca) {
+    macaX = mouseX;
+    macaY = mouseY;
+  }
+  
+  if (movendoFerro) {
+    ferroX = mouseX;
+    ferroY = mouseY;
+  }
+}
+
+faça as seguinte condições
+- se o papel for colocado sobre a lixeira amarela, marrom ou vermelha, faça a imagem do papel voltar ao local original
+- se garrafa for colocada sobre a lixeira azul, amarela ou marrom, faça a imagem da garrafa voltar ao local original
+- se o ferro for colocado sobre a lixeira azul, vermelha, ou marrom, faça a imagem do ferro voltar ao local original
+- se a maca for colocada sobre a lixeira azul, amarela, ou vermelha, faça a imagem da maca voltar ao local original
